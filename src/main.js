@@ -126,7 +126,7 @@ function createWindow() {
         // when you should delete the corresponding element.
         mainWindow = null;
         ready = false;
-        connectedFunc = null;
+        Func = null;
         client.removeListener(clientDataListener);
     });
     mainWindow.on('unresponsive', () => {
@@ -164,3 +164,4 @@ app.on('activate', function () {
     // dock icon is clicked and there are no other windows open.
     if (mainWindow == null) createWindow();
 });
+

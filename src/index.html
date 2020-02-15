@@ -3,12 +3,27 @@
 
 <head>
     <meta charset="utf-8">
-    <title>6672 Robot Dashboard of Fun</title>
+    <title>6672 Robot Dashboard of Pain</title>
     <link href="css/style.css" rel="stylesheet">
 </head>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
     <div id="timer"></div>
+    <script>
+        var counter = 135;
+        setInterval(function () {
+        if (counter >= 0) {
+            timeElement = parseInt(counter / 60) + ':' + counter % 60
+
+            document.getElementById("timer").innerHTML = timeElement;
+        }
+
+        counter --;
+
+        }, 1000)
+
+    </script>
+    <div id = 'logo'></div>
     <header>
         <!-- Tells whether robot is connected to dashboard. -->
         <div id="robot-state">Unknown state</div>
@@ -32,21 +47,66 @@
 
         <!-- robot diagram, arm moves when encoder value changes -->
         <div>
-            <svg id="robot-diagram" width="332" height="400">
-                <text x="40" y="340">robot diagram</text>
-                <rect x="75" y="360" width="230" height="40"></rect>
-                <rect x="85" y="370" width="210" height="40"></rect>
-                <rect id="robot-arm" x="5" y="375" width="80" height="10"></rect>
-                <circle cx="100" cy="410" r="25"></circle>
-                <circle cx="260" cy="410" r="25"></circle>
-                <rect x="60" y="380" width="250" height="30"></rect>
-                <text id="team" x="185" y="405" text-anchor="middle">6672</text>
-            </svg> 
-        </div>
+            <!--<svg width="580" height="402" xmlns="http://www.w3.org/2000/svg">
+                <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ 
+                <g>
+                 <title>background</title>
+                 <rect fill="#fff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+                 <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+                  <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+                 </g>
+                </g>
+                <g>
+                 <title>Layer 1</title>
+                 <rect id="svg_1" height="40" width="207" y="276" x="86" stroke-width="1.5" stroke="#000" fill="#fff"/>
+                 <ellipse ry="9" rx="9.5" id="svg_3" cy="251.65" cx="51" stroke-width="1.5" stroke="#000" fill="#fff"/>
+                 <ellipse ry="9.5" rx="10.5" id="svg_4" cy="301.15" cx="50" stroke-width="1.5" stroke="#000" fill="#fff"/>
+                 <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_5" y2="286.65" x2="50.5" y1="265.65" x1="51.5" stroke-width="1.5" stroke="#000" fill="none"/>
+                 <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_6" y2="274.65" x2="121.5" y1="262.65" x1="75.5" stroke-width="1.5" stroke="#000" fill="none"/>
+                 <rect stroke="#000" transform="rotate(16 106.70417785644554,265.9253845214843) " id="svg_7" height="8.444256" width="37.328041" y="345.703279" x="40.040149" stroke-width="1.5" fill="#fff"></rect>
+                 <rect stroke="#000" id="svg_10" height="33" width="123" y="241.65" x="126.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff"/>
+                 <rect stroke="#000" id="svg_11" height="154" width="34.000001" y="88.65" x="249.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff"/>
+                 <path id="svg_12" d="m249.5,273.65c0,0 19,-5 19,-5c0,0 14,-13 13.5,-13.65c0.5,0.65 3.5,-12.35 3.5,-12.35" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+                 <path id="svg_13" d="m249.5,87.65c0,0 4,-14 4,-14c0,0 8,-8 8,-8c0,0 12,-10 11.5,-10.65c0.5,0.65 11.5,-1.35 11,-2" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+                 <ellipse stroke="#000" ry="13" rx="13.5" id="svg_14" cy="89.649998" cx="284" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff"/>
+                 <ellipse ry="15" rx="16" id="svg_16" cy="320.65" cx="108.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+                 <ellipse ry="15" rx="16" id="svg_19" cy="321" cx="190.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+                 <ellipse ry="15" rx="16" id="svg_20" cy="321" cx="270" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+                 <line stroke-linecap="null" stroke-linejoin="null" id="svg_21" y2="243.65" x2="125.5" y1="249.65" x1="65.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+                </g>
+               </svg>
+        </div> -->
         <!-- robot diagram again, with top view.-->
         <div>
-            <svg id="robot-diagram-top" width="332" height="200">
-                <rect x="0" y="0" width="332" height="200"></rect>
+             <svg id="robot-diagram-bottom" width="580" height="402">
+                <svg width="580" height="440" x = "100" y = "35">
+                    <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+                    <g>
+                     <title>background</title>
+                     <rect fill="#fff" id="canvas_background" height="402" width="590" y="-1" x="-1"/>
+                     <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+                      <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+                     </g>
+                    </g>
+                    <g>
+                     <title>Layer 1</title>
+                     <rect id="svg_1" height="40" width="207" y="276" x="86" stroke-width="1.5" stroke="#000" fill="#fff"/>
+                     <ellipse ry="9" rx="9.5" id="svg_3" cy="251.65" cx="51" stroke-width="1.5" stroke="#000" fill="#fff"/>
+                     <ellipse ry="9.5" rx="10.5" id="svg_4" cy="301.15" cx="50" stroke-width="1.5" stroke="#000" fill="#fff"/>
+                     <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_5" y2="286.65" x2="50.5" y1="265.65" x1="51.5" stroke-width="1.5" stroke="#000" fill="none"/>
+                     <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_6" y2="274.65" x2="121.5" y1="262.65" x1="75.5" stroke-width="1.5" stroke="#000" fill="none"/>
+                     <rect stroke="#000" transform="rotate(16 106.70417785644554,265.9253845214843) " id="svg_7" height="8.444256" width="37.328041" y="345.703279" x="40.040149" stroke-width="1.5" fill="#fff"></rect>
+                     <rect stroke="#000" id="svg_10" height="33" width="123" y="241.65" x="126.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff"/>
+                     <rect stroke="#000" id="svg_11" height="154" width="34.000001" y="88.65" x="249.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff"/>
+                     <path id="svg_12" d="m249.5,273.65c0,0 19,-5 19,-5c0,0 14,-13 13.5,-13.65c0.5,0.65 3.5,-12.35 3.5,-12.35" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+                     <path id="svg_13" d="m249.5,87.65c0,0 4,-14 4,-14c0,0 8,-8 8,-8c0,0 12,-10 11.5,-10.65c0.5,0.65 11.5,-1.35 11,-2" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+                     <ellipse stroke="#000" ry="13" rx="13.5" id="svg_14" cy="89.649998" cx="284" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff"/>
+                     <ellipse ry="15" rx="16" id="svg_16" cy="320.65" cx="108.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+                     <ellipse ry="15" rx="16" id="svg_19" cy="321" cx="190.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+                     <ellipse ry="15" rx="16" id="svg_20" cy="321" cx="270" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+                     <line stroke-linecap="null" stroke-linejoin="null" id="svg_21" y2="243.65" x2="125.5" y1="249.65" x1="65.5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+                    </g>
+                   </svg> 
             </svg>
         </div>
 
