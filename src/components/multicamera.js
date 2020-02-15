@@ -2,11 +2,11 @@
 ui.camera = {
 	viewer: document.getElementById('camera'),
 	id: 0,
-	srcs: [ // Will default to first camera
+	srcs: [ // Will default to first camera 1067.72.2:1181
         'limelight.local:5801',
-        'INSERT SECOND CAMERA STREAM SOURCE',
-        'INSERT THIRD CAMERA STREAM SOURCE',
-        'INSERT FOURTH CAMERA STREAM SOURCE',
+        'turretCamera1 1181',
+        'turretCamera2 1182',
+        'turretCamera3 1183',
         'ETC'
     ]
 };
