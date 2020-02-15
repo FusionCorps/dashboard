@@ -61,18 +61,6 @@ body > * {
     font-size: 20vh;
     line-height: .8;
 }
-
-#logo {
-    position: absolute;
-    top: 1vh;
-    left: 200px;
-    width: 50px;
-    height: 50px;
-    background-color: #333;
-    background-image: ('../../images/fusionLogo.png');
-    background-size: 50px, 50px;
-}
-
 header {
     width: 20vw;
     height: 20vh;
@@ -81,18 +69,16 @@ header {
     color: white;
 }
 #camera {
-    padding: 20vh;
-    position: absolute;
-    bottom: 5vh;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
     left: 0;
-    width: 45vw;
-    height: 66vh;
+    width: 50vw;
+    height: 80vh;
     overflow: hidden;
     background-color: #333;
     /* You'll need to mess with this a bit to get your camera to work. Replace the url with a live-updating image feed from your camera. Using other camera streaming systems will require some tweaking. */
-    background-image: url('http://10.66.72.11:5800' );
-    background-size: 750px, 1200px;
-    background-repeat: no-repeat;
+    background-image: url('limelight.local:5801');
 }
 article {
     top: 0;
@@ -131,12 +117,12 @@ text {
 }
 #robot-diagram {
     position: absolute;
-    bottom: 0px;
+    bottom: 400px;
     right: 1vw;
 }
-#robot-diagram-bottom {
+#robot-diagram-top {
     position: absolute;
-    bottom: 00px;
+    bottom: 50px;
     right: 1vw;
 }
 
