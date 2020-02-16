@@ -26,7 +26,40 @@
         }, 1000)
 
     </script>
- 
+    <div id = 'target'>
+        <svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+            <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+            <g>
+             <title>background</title>
+             <rect fill="#fff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+             <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+              <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+             </g>
+            </g>
+            <g>
+             <title>Layer 1</title>
+             <path stroke="#000" id="svg_3" d="m4.5075,24.860177l10.500001,-21.500001l28.000002,0l10.499998,21.500001l-10.499998,21.500001l-28.000002,0l-10.500001,-21.500001z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="#fff"/>
+             <path id="svg_4" d="m9.4825,24.830177l8.357144,-15.500002l22.285716,0l8.357142,15.500002l-8.357142,15.500002l-22.285716,0l-8.357144,-15.500002z" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+            </g>
+           </svg>
+    </div>
+    <div id="battery-indicator">
+        <svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+            <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+            <g>
+             <title>background</title>
+             <rect fill="#fff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+             <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+              <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+             </g>
+            </g>
+            <g>
+             <title>Layer 1</title>
+             <path id="svg_1" d="m28.865369,8.225546l10.565917,17.170489l-4.356757,2.026388l13.304505,14.711347l-4.354805,2.456852l16.447148,24.634924l-27.897299,-18.878609l5.321021,-2.621711l-17.333335,-12.091926l6.211112,-3.736797l-18.301503,-12.68496l20.393995,-10.985999z" stroke-width="1.5" stroke="#000" fill="#fff"/>
+             <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="57" id="svg_4" y="55.25" x="62.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">: XX %</text>
+            </g>
+           </svg>
+    </div>
     <header>
         <!-- Tells whether robot is connected to dashboard. -->
         <div id="robot-state">Unknown state</div>
@@ -118,8 +151,14 @@
     <aside>
         <!-- Example button which toggles /SmartDashboard/exampleValue NetworkTables value.
             The <p> below then says the value. -->
-        <div id="example-section">
-            <button id="example-button">Change example value</button>
+        <div id="subsystems">
+            <p>Intake:
+                Hopper:
+                Indexer:
+                Shooter:
+                Chassis:
+                Climb:
+            </p> 
             <p id="example-readout">Value is undefined</p>
         </div>
         <!-- Autonomous selector -->
@@ -135,6 +174,13 @@
         </div>
         <div>
             <p>test text</p>
+        </div>
+        <div id = 'errors'>
+            <p>
+                ERRORs WILL
+                APPEAR
+                HERE !!!!!!
+            </p>
         </div>
     </aside>
 
