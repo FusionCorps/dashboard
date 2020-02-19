@@ -47,30 +47,53 @@ input[type="checkbox"] {
 /* Major interface panes, aside, article, header, etc. */
 body > * {
     padding: 10px;
-    position: fixed;
+    position: absolute;
+    right: 100px;
     overflow: scroll;
     background: #222;
 }
 #timer {
     font-family: monospace;
     display: block;
-    height: 20vh;
-    width: 30vw;
+    height: 100px;
+    width: 200px;
     top: 0;
-    left: 0;
-    font-size: 20vh;
+    left: 51px;
+    font-size: 50px;
     line-height: .8;
 }
 
 #logo {
     position: absolute;
     top: 1vh;
-    left: 200px;
+    left: 0vw;
     width: 50px;
     height: 50px;
-    background-color: #333;
-    background-image: ('../../images/fusionLogo.png');
+    background-color: white;
     background-size: 50px, 50px;
+    padding:0
+}
+
+#target {
+    position: relative;
+    top: 5px;
+    left: 200px;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    background-size: 70px, 70px;
+    padding: 0;
+}
+
+#battery-icon {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 80px;
+    height: 80px; 
+    background-color: #333;
+    background-size: 80px, 80px;
+    padding: 0;
 }
 
 header {
@@ -132,12 +155,15 @@ text {
 #robot-diagram {
     position: absolute;
     bottom: 0px;
-    right: 1vw;
+    right: 5px;
 }
 #robot-diagram-bottom {
     position: absolute;
-    bottom: 00px;
-    right: 1vw;
+    left: 0px;
+    bottom: 5px;
+    background-size: 1000px, 1000px;
+    background-color: #222;
+    padding: 0;
 }
 
 #robot-arm {
@@ -157,6 +183,25 @@ aside {
 }
 aside > * {
     margin-bottom: 20px;
+}
+
+#subsystems {
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    width: 100px;
+    height: 200px;
+    background-color: #222;
+}
+
+#errors {
+    position: absolute;
+    top: 400px;
+    left: 0px;
+    width: 100px;
+    height: 200px;
+    background-color: #222;
+    color: #ff0000;
 }
 #login {
     position: fixed;
