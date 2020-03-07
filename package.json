@@ -20,7 +20,7 @@
   },
   "homepage": "http://frcdashboard.github.io",
   "dependencies": {
-    "wpilib-nt-client": "^1.7.1"
+    "wpilib-nt-client": "^1.7.2"
   },
   "devDependencies": {
     "electron": "^7.1.14",

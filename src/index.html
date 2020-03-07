@@ -62,8 +62,23 @@
     </div>
     <header>
         <!-- Tells whether robot is connected to dashboard. -->
-        <div id="robot-state">Unknown state</div>
-        <button id="connect-button">Connect</button>
+        
+        <div id = "velocity">test</div>
+        <script>
+            // Decleration
+            const ntClient = require('wpilib-nt-client');
+            
+            const client = new ntClient.Client()
+            
+            // Connects the client to the server on team 6672's roborio
+            client.start((isConnected, err) => {
+                // Displays the error and the state of connection
+                console.log({ isConnected, err });
+            }, 'roborio-6672.local');
+
+            document.getElementById("velocity").innerHTML = client.getEntry("Velocity")
+  
+        </script>
     </header>
     <!-- You'll need to mess around with the CSS of #camera (found in css/style.css) to get it to work.
         More explanation in that CSS rule. -->
